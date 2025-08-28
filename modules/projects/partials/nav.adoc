@@ -1,0 +1,5 @@
+** Application Profile
+*** xref:projects:application-profile/index.adoc[]
+** xref:projects:controlled-vocabulary/index.adoc[]
+** xref:projects:ontology/index.adoc[Ontology]
+** xref:projects:documentation/index.adoc[]

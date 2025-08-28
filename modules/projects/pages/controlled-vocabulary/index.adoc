@@ -5,11 +5,12 @@
 // #TODO#: This should be formalized in a model, and the diagram should be generated from that.
 
 .Informal conceptual model of a controlled vocabulary
-[d2,format=svg,theme=5]
+[d2,format=svg,theme=5,width=70%]
 ----
 vars: {
     d2-config: {
         pad: 30
+        center: true
     }
 }
 Controlled vocabulary --> Term : hasPart

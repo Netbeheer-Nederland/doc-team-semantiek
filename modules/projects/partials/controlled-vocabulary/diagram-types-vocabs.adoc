@@ -1,8 +1,9 @@
-[d2,format=svg,theme=5]
+[d2,format=svg,theme=5,width=70%]
 ----
 vars: {
     d2-config: {
         pad: 30
+        center: true
     }
 }
 direction: up

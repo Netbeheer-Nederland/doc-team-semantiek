@@ -1,4 +1,4 @@
-= Project types
+= Project Types
 Bart Kleijngeld <bart.kleijngeld@alilander.com>
 August 4, 2025
 

@@ -1,2 +1,4 @@
-* xref:conceptual-models:index.adoc[]
+* xref:conceptual-models:index.adoc[Conceptual Models]
 include::conceptual-models:partial$nav.adoc[]
+* xref:projects:index.adoc[]
+include::projects:partial$nav.adoc[]

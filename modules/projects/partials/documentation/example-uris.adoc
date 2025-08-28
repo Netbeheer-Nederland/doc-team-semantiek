@@ -1,4 +1,4 @@
-[cols="h,3"]
+[cols="h,3",width=99%]
 |===
 | Project | URI
 
