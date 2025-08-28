@@ -1,0 +1,196 @@
+= Data Product Application Profile
+
+== Definition
+
+// #TODO#: This should be formalized in a model, and the diagram and glossary should be generated from that.
+
+.Informal conceptual model of a data product application profile
+[d2,format=svg,theme=5]
+----
+vars: {
+    d2-config: {
+        pad: 30
+        #layout-engine: elk
+    }
+}
+Profile --> Profile version : hasVersion
+Profile --> Vocabulary term : hasPart
+Profile version --> JSON Schema : hasResource
+Profile version --> Example data : hasResource
+Profile version --> SHACL schema : hasResource
+Vocabulary term --> LinkML schema : isDefinedBy
+Profile version --> LinkML schema : hasResource
+----
+
+'''
+
+[glossary]
+(application) profile^<<PROF>>^:: A specification that constrains, extends, combines, or provides guidance or explanation about the usage of other specifications.
+profile version:: A specific version of a profile.
+vocabulary term:: A controlled term defined in the context of this profile.
+profile resource^<<PROF>>^:: A resource that defines an aspect -- a particular part or feature -- of a profile.
+
+== Identification
+
+The considerations and justifications for the choices made are documented xref:application-profiles/index.adoc[here].
+
+NOTE: All IRI templates conform to <<RFC6570>>.
+
+[cols="h,3"]
+|===
+| Part | URI template
+
+| Profile
+| `\https://nbnl.info/\{profile}`
+
+| Vocabulary term
+| `\https://nbnl.info/\{profile}/term/\{reference}`
+
+| Profile version
+| `\https://nbnl.info/\{profile}/\{version}`
+
+| Schema
+| `\https://nbnl.info/\{profile}/\{version}/schema`
+
+| JSON Schema
+| `\https://nbnl.info/\{profile}/\{version}/schema/json-schema`
+
+| SHACL schema
+| `\https://nbnl.info/\{profile}/\{version}/schema/shacl`
+
+| Example data
+| `\https://nbnl.info/\{profile}/\{version}/example/\{reference}`
+|===
+
+where:
+
+[horizontal,labelwidth=25%]
+`\{profile}`:: Path component -- possibly nested -- that identifies the profile.
+`\{version}`:: Major version of the profile (e.g. `v1`).
+`\{reference}`:: Local name of the resource.
+
+'''
+
+.Example: Capaciteitskaart
+[%collapsible]
+====
+[cols="h,3"]
+|===
+| Part | URI
+
+| Profile
+| `\https://nbnl.info/capaciteitskaart`
+
+| Vocabulary term
+| `\https://nbnl.info/capaciteitskaart/term/ean18`
+
+| Profile version
+| `\https://nbnl.info/capaciteitskaart/v2`
+
+| Schema
+| `\https://nbnl.info/capaciteitskaart/v2/schema`
+
+| JSON Schema
+| `\https://nbnl.info/capaciteitskaart/v2/schema/json-schema`
+
+| Example data
+a|
+`\https://nbnl.info/capaciteitskaart/v2/example/tso` +
+`\https://nbnl.info/capaciteitskaart/v2/example/dso`
+|===
+====
+
+.Example: NC13 Core Equipment
+[%collapsible]
+====
+
+In this example, a nested namespace is used to group NC13 data products together.
+
+[cols="h,3"]
+|===
+| Part | URI
+
+| Profile
+| `\https://nbnl.info/nc13/core-eq`
+
+| Vocabulary term
+| `\https://nbnl.info/nc13/core-eq/term/ean18`
+
+| Profile version
+| `\https://nbnl.info/nc13/core-eq/v2`
+
+| Schema
+| `\https://nbnl.info/nc13/core-eq/v2/schema`
+
+| JSON Schema
+| `\https://nbnl.info/nc13/core-eq/v2/schema/json-schema`
+
+| Example data
+a|
+`\https://nbnl.info/nc13/core-eq/v2/example/tso` +
+`\https://nbnl.info/nc13/core-eq/v2/example/dso`
+|===
+====
+
+== Representation
+
+// Resource representations can be aimed at machine or human agents. Each representation
+
+* URIs of _information resources_ may redirect to URLs which provide the resource representation using status code `307 Temporary Redirect`.
+* _Non-information (or real-world) resources_ do not have representations, and redirect to appropriate representations offered by resources using status code `303 See Other`
+
+[cols="1,1,1,1,1"]
+|===
+.2+h| Part 2+h| Machine-processable 2+h|Human-readable
+h| Language h| Media type h| Language h| Media type
+
+| Profile
+| PROF
+| `application/ld+json`
+| Antora/AsciiDoc
+| `text/html`
+
+| Vocabulary termfootnote:[Vocabulary terms are real-world concepts and therefore do not have representations. Documents that describe them, however, can be redirected to using HTTP redirects with status code 303 (See Other).]
+2+| _n/a_
+2+| _n/a_
+
+| Profile version
+| PROF, RDF, JSON-LD
+| Antora/AsciiDoc, HTML/JS/CSS
+
+| Schema
+| LinkML, YAML
+| Antora/AsciiDoc, HTML/JS/CSS
+
+| JSON Schema
+| JSON Schema, JSON
+| _n/a_
+
+| Example data
+| JSON Schema, JSON
+| _n/a_
+|===
+
+== Versioning
+
+Data product application profiles are versioned using https://snowplow.io/blog/introducing-schemaver-for-semantic-versioning-of-schemas[SchemaVer] -- as advised by DWBP (#7):
+
+[quote]
+--
+Given a version number *`MODEL-REVISION-ADDITION`*, increment the:
+
+* *`MODEL`* when you make a breaking schema change which will prevent interaction with _any_ historical data
+* *`REVISION`* when you make a schema change which may prevent interaction with _some_ historical data
+* *`ADDITION`* when you make a schema change that is compatible with _all_ historical data
+--
+
+The schema and examples of course follow suit, but not the vocabulary.
+
+=== Vocabulary
+
+Profile vocabulary follow an evolution strategy where breaking changes are never allowed.
+
+As can be seen in the definition above, the vocabulary is part of the profile itself and not any version of it. This is by design, since the stability of vocabulary is essential, since it is the terms from the vocabulary that are being used in all the data sets that use it.
+
+Through deprecation and introduction of new URIs and statements, newer and older versions of the vocabulary model all live in one schema.
+

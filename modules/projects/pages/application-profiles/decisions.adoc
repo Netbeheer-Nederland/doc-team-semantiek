@@ -1,0 +1,11 @@
+= URI Template Considerations and Decisions
+
+== What gets assigned a URI?
+
+== URI, URL, URN and IRI
+
+== Hash vs slash (303)
+
+== DDD hierarchical structuring
+
+===

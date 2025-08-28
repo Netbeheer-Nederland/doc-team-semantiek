@@ -1,0 +1,17 @@
+[cols="h,3"]
+|===
+| Part | URI template
+
+| Controlled vocabulary
+| `\https://nbnl.info/\{vocabulary\}`
+
+| Vocabulary term
+| `\https://nbnl.info/\{vocabulary\}/term/\{reference}`
+
+|===
+
+where:
+
+[horizontal,labelwidth=25%]
+`\{vocabulary}`:: Path component -- possibly nested -- that identifies the vocabulary.
+`\{reference}`:: Local name of the resource.

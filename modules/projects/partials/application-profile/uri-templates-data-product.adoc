@@ -1,0 +1,30 @@
+[cols="h,3"]
+|===
+| Part | URI template
+
+| Profile
+| `\https://nbnl.info/\{profile}`
+
+| Vocabulary term
+| `\https://nbnl.info/\{profile}/term/\{reference}`
+
+| Profile version
+| `\https://nbnl.info/\{profile}/\{version}`
+
+| Schema
+| `\https://nbnl.info/\{profile}/\{version}/schema`
+
+| JSON Schema
+| `\https://nbnl.info/\{profile}/\{version}/schema/json-schema`
+
+| Examples
+| `\https://nbnl.info/\{profile}/\{version}/example/\{reference}`
+
+|===
+
+where:
+
+[horizontal,labelwidth=25%]
+`\{profile}`:: Path component -- possibly nested -- that identifies the profile.
+`\{version}`:: Major version of the profile (e.g. `v1`).
+`\{reference}`:: Local name of the resource.

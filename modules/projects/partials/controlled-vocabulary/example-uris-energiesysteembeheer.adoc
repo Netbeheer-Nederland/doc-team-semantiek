@@ -1,0 +1,11 @@
+[cols="h,3"]
+|===
+| Part | URI
+
+| Controlled vocabulary
+| `\https://nbnl.info/energiesysteembeheer`
+
+| Vocabulary term
+| `\https://nbnl.info/energiesysteembeheer/term/ean18`
+
+|===

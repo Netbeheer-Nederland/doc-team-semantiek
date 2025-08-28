@@ -1,0 +1,12 @@
+= Projects
+Bart Kleijngeld <bart.kleijngeld@alilander.com>
+August 4, 2025
+
+Work we do i
+
+== Project types
+
+.Project types
+include::partial$project_types.adoc[]
+
+NOTE: This list of project types will be extended when necessary or useful.

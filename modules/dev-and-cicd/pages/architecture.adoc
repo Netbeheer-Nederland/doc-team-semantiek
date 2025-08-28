@@ -1,0 +1,122 @@
+= Project Architecture
+Bart Kleijngeld <bart.kleijngeld@alliander.com>
+August 4, 2025
+
+Overview of architecture -- including decisions.
+
+image::Env.png[]
+
+== Project
+
+<<dfn-project,Projects>> are maintained using Git, and every project is maintained in its own, dedicated Git repository^<<adr1,ADR1>>^. This makes it possible to independently evolve and maintain different projects whilst leveraging the full extent of capabilities Git offers.
+
+=== Metadata
+
+Project metadata MUST be specified in the `antora.yml` file at the root of the repository.footnote:[Since every project is to be published on the <<dfn-documentation-site,documentation site>> using Antora, each project MUST be an Antora component. Consequently, each revision is an Antora component version, for which the presence of an Antora component version descriptor file (`antora.yml`) is required. The role and guaranteed presence of this file make it a perfect fit for use as the project specification file.]
+
+
+.Project metadata of a data product information model
+====
+[source,yaml]
+....
+name: core-equipment <1>
+title: Core Equipment <2>
+version: 1.1 <3>
+nav: <4>
+- modules/ROOT/nav.adoc
+ext: <5>
+  project-type: data-product-information-model <6>
+....
+<1> Project name for technical identification purposes.footnote:[The `name` key specifies the component version name which Antora uses to build a virtual file system of all the aggregated content.]
+<2> The project title. Intended for presentation to humans.
+<3> The project version.footnote:[Antora will use this field to discern between component versions of the same component.]
+<4> The location of the document which defines the navigation of the component.
+<5> `ext` is an open key reserved for extensions to componeent version descriptor files.
+<6> We introduce the custom key `project-type` to enable the declaration of the project type.
+
+====
+
+
+
+
+
+==== Profile type
+
+To ensure a controlled degree of consistency across projects, each project MUST specify to be of exactly one project type^<<adr2,ADR2>>^, choosing between:
+
+include::partial$project_types.adoc[]
+
+Each such project type puts constraints on the project -- e.g. on modeling languages and file structure to use -- to guarantee a level of uniformity across all projects of the same type, enabling the reuseo of business logic for (centrally) processing the source files.
+
+NOTE: Constraints can also be type-independent, i.e. hold for all projects. One example is the requirement that all projects must specify what their type is in `antora.yml`.
+
+===== Declaring the project type
+
+
+
+
+.Constraints put on _schema_ projects
+====
+The project type _schema_ could dictate -- among others -- the following constraints:
+
+* The modeling language must be LinkML.
+* The model must be serialized using YAML.
+* Generated artifacts should be placed in the `artifacts`.
+
+If there are several projects of this type and all of them satisfy these constraints, then the business logic to generate documentation for the schemas in these projects can be centralized.
+====
+
+=== Files
+
+
+* Source files
+* Artifacts
+
+
+
+
+
+=== Releasing
+
+To release a new project version or
+
+
+
+== Documentation
+
+The Antora framework is used to generate a website based on documentation written and generated. One of its core features is the ability to scan and aggregate content from a list of sources -- most notably Git repositories. These content sources are specified in an Antora playbook file (`antora-playbook.yml`), the file which declares for _what_ content documentation needs to be generated, and _how_ this ought to occur.
+
+For Antora to recognize a Git ref as a content source, the repository must provide an Antora component version descriptor file (`antora.yml`) at their root. The presence of this file indicates to Antora the repository should be treated as a content source containing an Antora component version, and the file contents consist of metadata and instructions for how to generate documentation.
+
+Then, for each content source, Antora iterates through all its commits which satisfy the filters specified in the playbook, and generates documentation for each such commit. These filters may depend on the type of project in question.
+
+Common filters include:
+
+* _all tags satisfying the pattern ``v\*.*.*``_, or
+* _all files in the `docs` branch_.
+
+
+
+
+
+[glossary]
+== Terms and definitions
+
+[glossary]
+[[dfn-project]] project::
+#TODO#.
+[[dfn-project-type]] project type::
+#TODO#.
+[[dfn-developer]] developer::
+#TODO#.
+[[dfn-documentation-site]] documentation site::
+#TODO#.
+
+
+== Decisions
+// TODO: Move to different page?
+
+
+
+[[adr1]] Every project MUST be maintained in a dedicated Git repository.::
+[[adr2]] Every project MUST be of exactly one project type.::

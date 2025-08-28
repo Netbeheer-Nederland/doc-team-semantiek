@@ -1,0 +1,111 @@
+= Controlled Vocabulary
+
+== Definition
+
+// #TODO#: This should be formalized in a model, and the diagram should be generated from that.
+
+.Informal conceptual model of a controlled vocabulary
+[d2,format=svg,theme=5]
+----
+vars: {
+    d2-config: {
+        pad: 30
+    }
+}
+Controlled vocabulary --> Term : hasPart
+----
+
+.Types of controlled vocabularies
+[d2,format=svg,theme=5]
+----
+vars: {
+    d2-config: {
+        pad: 30
+    }
+}
+direction: up
+Code list --> Controlled vocabulary {
+    target-arrowhead: {
+        style.filled: false
+    }
+}
+Alignment --> Controlled vocabulary {
+    target-arrowhead: {
+        style.filled: false
+    }
+}
+Thesaurus --> Controlled vocabulary {
+    target-arrowhead: {
+        style.filled: false
+    }
+}
+Taxonomy --> Controlled vocabulary {
+    target-arrowhead: {
+        style.filled: false
+    }
+}
+----
+
+== Identification
+
+The considerations and justifications for the choices made are documented xref:controlled-vocabularies/index.adoc[here].
+
+NOTE: All IRI templates conform to <<RFC6570>>.
+
+[cols="h,3"]
+|===
+| Part | URI template
+
+| Controlled vocabulary
+| `\https://nbnl.info/\{vocabulary}`
+
+| Vocabulary term
+| `\https://nbnl.info/\{vocabulary}/term/\{reference}`
+
+|===
+
+where:
+
+[horizontal,labelwidth=25%]
+`\{vocabulary}`:: Path component -- possibly nested -- that identifies the profile.
+`\{reference}`:: Local name of the resource.
+
+'''
+
+.Example: Energiesysteembeheer thesaurus
+[%collapsible]
+====
+[cols="h,3"]
+|===
+| Part | URI
+
+| Thesaurus
+| `\https://nbnl.info/energiesysteembeheer`
+
+| Term
+| `\https://nbnl.info/energiesysteembeheer/term/sbiCodes`
+|===
+====
+
+== Representation
+
+[cols="h,2,2"]
+|===
+| Resource | Machine-processable | Human-readable
+
+| Controlled vocabulary
+| SKOS, RDF
+| BegrippenXL, HTML
+
+| Vocabulary term
+| _n/a_
+| _n/a_
+
+|===
+
+== Versioning
+
+Controlled vocabularies follow an evolution strategy where breaking changes are never allowed.
+
+Through deprecation and introduction of new URIs and statements, newer and older versions of the vocabulary model all live in one schema.
+

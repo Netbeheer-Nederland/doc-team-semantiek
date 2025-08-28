@@ -1,0 +1,66 @@
+= Definitions Taxonomy
+:version: 0.1
+:domain: nbnl.info
+:toc:
+:toclevels: 4
+Bart Kleijngeld <bart.kleijngeld@alliander.com>
+{version}, July 22, 2025
+
+This is a taxonomy of all the various types of definitions Team Semantiek creates and maintains. Each subsection of the <<taxonomy>> section of this document corresponds to a definition type, where subsections denote a _narrower than_ relation to their parent section.
+
+By consulting the <<taxonomy>> section in the table of contents one can see the taxonomic hierarchy reflected.
+
+== Abstract
+
+== Status of this document
+
+The taxonomy is a work in progress.
+
+Future work includes formalizing the definition of this taxonomy using SKOS, allowing -- amongst other things -- the generation of this document.
+
+[#taxonomy]
+== Taxonomy
+
+[#controlled-vocabulary]
+=== Controlled vocabulary
+
+Controlled vocabularies are defined as follows ^<<ANSI-NISO-Z3919>>^:
+
+[quote,ANSI/NISO Z39.19, Section TODO]
+--
+A list of terms that have been enumerated explicitly. This list is controlled by and is available from a controlled vocabulary registration authority. All terms in a controlled vocabulary must have an unambiguous, non-redundant definition. +
+
+NOTE: _This is a design goal that may not be true in practice; it depends on how strict the controlled vocabulary registration authority is regarding registration of terms into a controlled vocabulary._ +
+
+At a minimum, the following two rules must be enforced: +
+
+1. _If the same term is commonly used to mean different concepts, then its name is explicitly qualified to resolve this ambiguity._ +
++
+NOTE: _This rule does not apply to synonym rings._ +
+
+2. _If multiple terms are used to mean the same thing, one of the terms is identified as the preferred term in the controlled vocabulary and the other terms are listed as synonyms or aliases._
+--
+
+==== List
+==== Synonym ring
+==== Taxonomy
+==== Thesaurus
+=== Model
+// ==== Vocabulary (or under controlled vocabularies)
+==== Ontology
+==== Data model
+=== Standard
+==== Application profile
+==== Best current practice
+==== Guide
+
+[bibliography]
+== References
+
+* [[[ANSI-NISO-Z3919]]] ANSI/NISO Z39.19-2005 (R2010)
+
+[glossary]
+== Glossary
+
+[glossary]
+controlled vocabulary:: A list of terms that have been enumerated explicitly. This list is controlled by and is available from a controlled vocabulary registration authority. All terms in a controlled vocabulary must have an unambiguous, non-redundant definition. (For the full definition, see <<controlled-vocabulary>>)

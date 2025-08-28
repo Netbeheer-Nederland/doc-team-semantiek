@@ -1,0 +1,96 @@
+= Documentation
+
+== Definition
+
+#Work in progress#.
+
+// #TODO#: This should be formalized in a model, and the diagram should be generated from that.
+
+.Types of documentation
+[d2,format=svg,theme=5]
+----
+vars: {
+    d2-config: {
+        pad: 30
+    }
+}
+direction: up
+Standard --> Documentation {
+    target-arrowhead: {
+        style.filled: false
+    }
+}
+Guide --> Documentation {
+    target-arrowhead: {
+        style.filled: false
+    }
+}
+Policy --> Documentation {
+    target-arrowhead: {
+        style.filled: false
+    }
+}
+----
+
+== Identification
+
+The considerations and justifications for the choices made are documented xref:controlled-vocabularies/index.adoc[here].
+
+NOTE: All IRI templates conform to <<RFC6570>>.
+
+[cols="h,3"]
+|===
+| Part | URI template
+
+| Documentation project
+| `\https://nbnl.info/\{documentation}`
+
+|===
+
+where:
+
+[horizontal,labelwidth=25%]
+`\{documentation}`:: Path component -- possibly nested -- that identifies the documentation project.
+
+CAUTION: Avoid assigning stable URIs to document parts such as pages and sections.
+
+
+'''
+
+.Examples
+[%collapsible]
+====
+[cols="h,3"]
+|===
+| Project | URI
+
+| URI Policy
+| `\https://nbnl.info/uri-policy`
+
+| Term
+| `\https://nbnl.info/energiesysteembeheer/term/sbiCodes`
+|===
+====
+
+== Representation
+
+[cols="h,2,2"]
+|===
+| Resource | Machine-processable | Human-readable
+
+| Controlled vocabulary
+| SKOS, RDF
+| BegrippenXL, HTML
+
+| Vocabulary term
+| _n/a_
+| _n/a_
+
+|===
+
+== Versioning
+
+Controlled vocabularies follow an evolution strategy where breaking changes are never allowed.
+
+Through deprecation and introduction of new URIs and statements, newer and older versions of the vocabulary model all live in one schema.
+

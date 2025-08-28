@@ -1,0 +1,42 @@
+:domain: nbnl.info
+:name: capaciteitskaart
+:prefix: ck
+
+[source,yaml,subs="+attributes"]
+....
+id: https://{domain}/{name}/v2/schema <1>
+version: 2.0.0 <2>
+name: {name} <3>
+prefixes:
+  cim: https://cim.ucaiug.io/ns#
+  esb: https://{domain}/energiesysteembeheer/term/ <3>
+  {prefix}: https://{domain}/{name}/term/ <4>
+default_prefix: {prefix}
+# [abbreviated]...
+classes:
+  EnergyArea:
+    class_uri: cim:EnergyArea
+    is_a: IdentifiedObject
+    exact_mappings:
+      - esb:voedingsgebied
+    attributes:
+      type:
+        slot_uri: {prefix}:EnergyArea.type
+        range: EnergyAreaKind
+        required: false
+        multivalued: false
+      # [abbreviated]...
+  # [abbreviated]...
+enums:
+  EnergyAreaKind:
+    permissible_values:
+      energy_area:
+        meaning: {prefix}:EnergyAreaKind.energyArea
+      congestion_area:
+        meaning: {prefix}:EnergyAreaKind.congestionArea
+  # [abbreviated]...
+# [abbreviated]...
+....
+<1> The schema URI always needs to explicitly specify the major version of the profile.
+<3> Prefix for easy referencing of definitions in one of the taxonomies maintained by us.
+<4> Prefix for easy referencing to terms defined in this profile.

@@ -1,0 +1,13 @@
+[cols="h,3"]
+|===
+| Part | URI template
+
+| Documentation
+| `\https://nbnl.info/\{documentation\}`
+
+|===
+
+where:
+
+[horizontal,labelwidth=25%]
+`\{documentation}`:: Path component -- possibly nested -- that identifies the documentation.

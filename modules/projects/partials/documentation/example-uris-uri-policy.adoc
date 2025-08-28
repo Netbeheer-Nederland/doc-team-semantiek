@@ -1,0 +1,8 @@
+[cols="h,3"]
+|===
+| Part | URI
+
+| Documentation
+| `\https://nbnl.info/uri-policy`
+
+|===

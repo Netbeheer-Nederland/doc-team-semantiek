@@ -1,0 +1,218 @@
+= Application Profile
+Bart Kleijngeld <bart.kleijngeld@alliander.com>
+July 2, 2025
+:dfn-profile: pass:c,q[A specification that constrains, extends, combines, or provides guidance or explanation about the usage of other specifications. This definition includes what are often called "application profiles", "metadata application profiles", or "metadata profiles".  ^<<PROF>>^]
+:dfn-vocabulary: pass:c,q[Defines terms used in the profile specification. ^<<PROF>>^]
+
+== Definition
+
+To define and represent <<def-application-profile>>,(application) profiles>>, we will make use of _The Profiles Vocabulary_ ^<<PROF>>^.
+
+For starters, we will adopt its definition of a profile:
+
+[quote]
+--
+{dfn-profile}
+--
+
+[TIP]
+--
+Since http://www.w3.org/ns/dx/prof/Profile[profiles] ^<<PROF>>^ are also http://purl.org/dc/terms/Standard[standards] ^<<DCTERMS>>^, the vocabulary ^<<PROF>>^ permits the profiling of profiles. This simplification provides a great deal of flexibility.
+
+This is also mentioned in the abstract ^<<PROF>>^:
+
+[quote]
+It can be used to describe profile hierarchies wherein profiles of specifications may themselves have profiles indicated.
+--
+
+.Examples
+[caption=]
+====
+CGMES::
+    The ENTSO-E has defined CGMES profiles, which can be properly understood as profiles -- in the PROF sense -- of the CIM standard(s). Each profile comes with normative documentation,and machine-readable vocabulary and constraints.
+NBNL data products::
+    NBNL defines CIM-based information models for data products. These are also CIM profiles, and consist of guiding documentation and machine-readable vocabulary.
+====
+
+=== Profile resources
+
+_The Profiles Vocabulary_ ^<<PROF>>^ allows the specification of https://www.w3.org/TR/dx-prof/#Class:ResourceDescriptor[resource descriptors] ^<<PROF>>^, each of which represents a _profle resource_ to be associated with your profile. These can be guidance documents, standard specifications, machine-readable models such as ontologies and schemas, and so on.
+
+For each of these resource descriptors ^<<PROF>>^ you can specify -- among other things -- the role it plays in the profile, where the https://www.w3.org/TR/dx-prof/#Property:hasArtifact[artefact] ^<<PROF>>^ representing the resource can be retrieved, as well as what http://purl.org/dc/terms/format[format] ^<<DCTERMS>>^ is used to serialize the representation.
+
+'''
+
+What follows is a structural specification of possible profile resources in NBNL profiles, ordered by role.
+
+==== Vocabulary
+
+[cols="h,1"]
+|===
+
+| Definition
+| {dfn-vocabulary}
+| Role ^<<PROF>>^
+| `http://www.w3.org/ns/dx/prof/role/vocabulary`
+
+|===
+
+.Profile resources
+[cols="h,1"]
+|===
+| Resource | PROF resource role
+
+| `http://www.w3.org/ns/dx/prof/role/vocabulary`
+
+| Ontology
+| `https://meta.nbnl.info/profile-roles/ontology`
+
+| Data model
+| `https://meta.nbnl.info/profile-roles/data-model`
+
+| Standard
+| `http://www.w3.org/ns/dx/prof/role/standard`
+
+| Schema
+| `http://www.w3.org/ns/dx/prof/role/schema`
+
+| Guidance
+| `http://www.w3.org/ns/dx/prof/role/guidance`
+
+| Example
+| `http://www.w3.org/ns/dx/prof/role/example`
+
+|===
+
+
+=== Profile definition
+
+
+* Provenance and governance
+* Ownership and responsibilities
+* Version
+* ...
+
+=== Schema
+See Schema page.
+
+=== Documentation
+
+== Conformance
+
+== Identification
+
+NOTE: All IRI templates conform to <<RFC6570>>.
+
+.Profile IRI template (base)
+[source]
+--
+https://{profile}.nbnl.info/{resource-role}
+--
+
+// #TODO: tso.meetdata.nbnl.info and dso.meetdata.nbnl.info
+
+
+.IRI templates
+[cols="h,1"]
+|===
+| Resource | IRI template
+
+| Profile
+// <<dfn-profile>>
+| `\https://\{profile}.nbnl.info`
+
+| Vocabulary
+| `\https://\{profile}.nbnl.info/vocabulary/\{metamodel}`
+
+| Ontology
+| `\https://\{profile}.nbnl.info/[term\|def\|id]/\{term}`
+
+| Data model
+| `\https://\{profile}.nbnl.info/data-model/\{metamodel}`
+
+| Documentation
+| `\https://\{profile}.nbnl.info/data-model/\{metamodel}`
+
+| Standard
+| `\https://\{profile}.nbnl.info/data-model/\{metamodel}`
+|===
+
+== Representation
+
+[cols="h,2,2"]
+|===
+| Resource | Machine-readable representation | Human-readable representation
+
+| Profile definition
+| PROF, RDF, JSON-LD
+| Antora/AsciiDoc, HTML/JS/CSS
+
+| Vocabulary
+| _n/a_
+| _n/a_
+
+| Thesaurus
+a| SKOS(XL), Turtle
+| Antora/AsciiDoc, HTML/JS/CSS
+
+| Ontology
+a| OWL, Turtle +
+LinkML, YAML
+| Antora/AsciiDoc, HTML/JS/CSS
+
+| Data model
+| SHACL, Turtle
+| Antora/AsciiDoc, HTML/JS/CSS
+
+| Documentation (guide/standard)
+| _n/a_
+| Antora/AsciiDoc, HTML/JS/CSS
+|===
+
+
+* _Machine-readable_: RDF-based serializations (JSON-LD and Turtle) of `prof:Profile`
+* _Human-readable_: HTML serialization of `prof:Profile` (Antora)
+
+
+// Following the REST architectural style, representations do not get their own IRIs, only resources do.
+
+// Since we have chosen to version data products such that breaking changes can occur, each major version must be regarded a new resource and get its own IRI.
+
+
+* Conneg is implemented to serve both machine-readable and human-readable representations
+** Representations do not need and should net have generic IRIs because of this (REST)
+*** This makes `www` and `data` URIs unnecessary
+* Each major version must be a different (generic) resource
+
+
+== Versioning
+
+* Follow http://snowplowanalytics.com/blog/2014/05/13/introducing-schemaver-for-semantic-versioning-of-schemas/[SchemaVer] as advised by DWBP #7
+** This means a breaking change triggers a major version increment
+
+== Terms and definitions
+
+[[def-application-profile]] (application) profile::
+{dfn-profile}
+
+[[def-resource]]resource::
+    Anything identifiable by an IRI.
+
+[[def-model]]model::
+
+
+[[def-ontology]]ontology::
+    A model in which a shared conceptualization is expressed in a formal and machine-readable manner.
+
+
+[[def-vocabulary]]vocabulary::
+    A collection of IRIs to enable to identification of resources in models. Vocabularies are not themselves a model.
+
+
+
+[bibliography]
+== References
+* [[[PROF]]] DXWG: https://www.w3.org/TR/dx-prof[PROF]
+* [[[RFC6570]]] RFC6570: https://datatracker.ietf.org/doc/html/rfc6570[URI Template]
+* [[[DCTERMS]]] Dublin Core: http://purl.org/dc/terms/[DCMI Metadata Terms]
+* [[[RDF11]]] W3C: https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-vocabulary[RDF 1.1 Concepts and Abstract Syntax]

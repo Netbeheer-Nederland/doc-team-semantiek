@@ -1,0 +1,4 @@
+* xref:project_types/application_profile/index.adoc[*Application profile*]
+* xref:ROOT:nbea-advisory-report:project_types/schema/index.adoc[*Conceptual model*]
+* xref:ROOT:nbea-advisory-report:project_types/schema/index.adoc[*Schema*]
+* xref:ROOT:nbea-advisory-report:project_types/schema/index.adoc[*Documentation*]
