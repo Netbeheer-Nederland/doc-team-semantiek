@@ -14,10 +14,13 @@
 | Schema
 | `\https://nbnl.info/capaciteitskaart/v2/schema`
 
+| SHACL schema
+| `\https://nbnl.info/capaciteitskaart/v2/schema/shacl`
+
 | JSON Schema
 | `\https://nbnl.info/capaciteitskaart/v2/schema/json-schema`
 
-| Examples
+| Example data
 a|
 `\https://nbnl.info/capaciteitskaart/v2/example/dso` +
 `\https://nbnl.info/capaciteitskaart/v2/example/tso`

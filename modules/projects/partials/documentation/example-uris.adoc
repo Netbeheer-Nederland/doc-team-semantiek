@@ -1,8 +1,7 @@
 [cols="h,3"]
 |===
-| Part | URI
+| Project | URI
 
-| Documentation
+| URI Policy
 | `\https://nbnl.info/uri-policy`
-
 |===

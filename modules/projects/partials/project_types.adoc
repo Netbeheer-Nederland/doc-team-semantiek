@@ -1,3 +1,4 @@
-* xref:application-profile/index.adoc[Application profile]
-* xref:controlled-vocabulary/index.adoc[Controlled vocabulary]
-* xref:documentation/index.adoc[Documentation]
+* xref:doc-team-semantiek:projects:application-profile/index.adoc[Application profile]
+* xref:doc-team-semantiek:projects:controlled-vocabulary/index.adoc[Controlled vocabulary]
+* xref:doc-team-semantiek:projects:ontology/index.adoc[Ontology]
+* xref:doc-team-semantiek:projects:documentation/index.adoc[Documentation]

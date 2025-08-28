@@ -60,16 +60,7 @@ CAUTION: Avoid assigning stable URIs to document parts such as pages and section
 .Examples
 [%collapsible]
 ====
-[cols="h,3"]
-|===
-| Project | URI
-
-| URI Policy
-| `\https://nbnl.info/uri-policy`
-
-| Term
-| `\https://nbnl.info/energiesysteembeheer/term/sbiCodes`
-|===
+include::doc-team-semantiek:projects:partial$documentation/example-uris.adoc[]
 ====
 
 == Representation

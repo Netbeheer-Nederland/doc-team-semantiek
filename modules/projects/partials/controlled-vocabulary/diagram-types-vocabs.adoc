@@ -1,0 +1,29 @@
+[d2,format=svg,theme=5]
+----
+vars: {
+    d2-config: {
+        pad: 30
+    }
+}
+direction: up
+Code list --> Controlled vocabulary {
+    target-arrowhead: {
+        style.filled: false
+    }
+}
+Alignment --> Controlled vocabulary {
+    target-arrowhead: {
+        style.filled: false
+    }
+}
+Thesaurus --> Controlled vocabulary {
+    target-arrowhead: {
+        style.filled: false
+    }
+}
+Taxonomy --> Controlled vocabulary {
+    target-arrowhead: {
+        style.filled: false
+    }
+}
+----

@@ -14,10 +14,13 @@
 | Schema
 | `\https://nbnl.info/\{profile}/\{version}/schema`
 
+| SHACL schema
+| `\https://nbnl.info/\{profile}/\{version}/schema/shacl`
+
 | JSON Schema
 | `\https://nbnl.info/\{profile}/\{version}/schema/json-schema`
 
-| Examples
+| Example data
 | `\https://nbnl.info/\{profile}/\{version}/example/\{reference}`
 
 |===
