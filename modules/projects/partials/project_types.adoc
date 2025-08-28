@@ -1,0 +1,3 @@
+* xref:application-profile/index.adoc[Application profile]
+* xref:controlled-vocabulary/index.adoc[Controlled vocabulary]
+* xref:documentation/index.adoc[Documentation]

@@ -48,7 +48,7 @@ Taxonomy --> Controlled vocabulary {
 
 == Identification
 
-The considerations and justifications for the choices made are documented xref:controlled-vocabularies/index.adoc[here].
+The considerations and justifications for the choices made are documented xref:controlled-vocabulary/index.adoc[here].
 
 NOTE: All IRI templates conform to <<RFC6570>>.
 

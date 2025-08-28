@@ -1,0 +1,10 @@
+= Project types
+Bart Kleijngeld <bart.kleijngeld@alilander.com>
+August 4, 2025
+
+Here you find information about maintaining each type of definition Team Semantiek is responsible for, including their definitions, how to take care of identification and representation, and how to deal with versioning.
+
+.Project types
+include::partial$project_types.adoc[]
+
+NOTE: This list of project types will be extended when necessary or useful.

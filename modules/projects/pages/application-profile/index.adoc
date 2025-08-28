@@ -32,7 +32,7 @@ profile resource^<<PROF>>^:: A resource that defines an aspect -- a particular p
 
 == Identification
 
-The considerations and justifications for the choices made are documented xref:application-profiles/index.adoc[here].
+The considerations and justifications for the choices made are documented xref:application-profile/index.adoc[here].
 
 NOTE: All IRI templates conform to <<RFC6570>>.
 
