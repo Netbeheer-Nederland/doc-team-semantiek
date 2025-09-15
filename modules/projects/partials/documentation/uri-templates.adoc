@@ -1,13 +1,13 @@
-[cols="1,3"]
+[cols="h,3"]
 |===
 | Part | URI template
 
-| Documentation
-| `\https://nbnl.info/\{documentation\}`
+| Documentation project
+| `\https://nbnl.info/\{documentation}`
 
 |===
 
 where:
 
 [horizontal,labelwidth=25%]
-`\{documentation}`:: Path component -- possibly nested -- that identifies the documentation.
+`\{documentation}`:: Path component -- possibly nested -- that identifies the documentation project.

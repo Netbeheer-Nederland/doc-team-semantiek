@@ -1,0 +1,14 @@
+.Example: Energiesysteembeheer thesaurus
+[%collapsible]
+====
+[cols="h,3"]
+|===
+| Part | URI
+
+| Thesaurus
+| `\https://nbnl.info/energiesysteembeheer`
+
+| Term
+| `\https://nbnl.info/energiesysteembeheer/term/sbiCodes`
+|===
+====

@@ -34,103 +34,15 @@ profile resource^<<PROF>>^:: A resource that defines an aspect -- a particular p
 
 The considerations and justifications for the choices made are documented xref:application-profile/index.adoc[here].
 
-NOTE: All IRI templates conform to <<RFC6570>>.
+NOTE: All URI templates conform to <<RFC6570>>.
 
-[cols="h,3"]
-|===
-| Part | URI template
-
-| Profile
-| `\https://nbnl.info/\{profile}`
-
-| Vocabulary term
-| `\https://nbnl.info/\{profile}/term/\{reference}`
-
-| Profile version
-| `\https://nbnl.info/\{profile}/\{version}`
-
-| Schema
-| `\https://nbnl.info/\{profile}/\{version}/schema`
-
-| JSON Schema
-| `\https://nbnl.info/\{profile}/\{version}/schema/json-schema`
-
-| SHACL schema
-| `\https://nbnl.info/\{profile}/\{version}/schema/shacl`
-
-| Example data
-| `\https://nbnl.info/\{profile}/\{version}/example/\{reference}`
-|===
-
-where:
-
-[horizontal,labelwidth=25%]
-`\{profile}`:: Path component -- possibly nested -- that identifies the profile.
-`\{version}`:: Major version of the profile (e.g. `v1`).
-`\{reference}`:: Local name of the resource.
+include::partial$application-profile/uri-templates.adoc[]
 
 '''
 
-.Example: Capaciteitskaart
-[%collapsible]
-====
-[cols="h,3"]
-|===
-| Part | URI
+include::example$capaciteitskaart-uris.adoc[]
+include::example$nc13-core-equipment-uris.adoc[]
 
-| Profile
-| `\https://nbnl.info/capaciteitskaart`
-
-| Vocabulary term
-| `\https://nbnl.info/capaciteitskaart/term/ean18`
-
-| Profile version
-| `\https://nbnl.info/capaciteitskaart/v2`
-
-| Schema
-| `\https://nbnl.info/capaciteitskaart/v2/schema`
-
-| JSON Schema
-| `\https://nbnl.info/capaciteitskaart/v2/schema/json-schema`
-
-| Example data
-a|
-`\https://nbnl.info/capaciteitskaart/v2/example/tso` +
-`\https://nbnl.info/capaciteitskaart/v2/example/dso`
-|===
-====
-
-.Example: NC13 Core Equipment
-[%collapsible]
-====
-
-In this example, a nested namespace is used to group NC13 data products together.
-
-[cols="h,3"]
-|===
-| Part | URI
-
-| Profile
-| `\https://nbnl.info/nc13/core-eq`
-
-| Vocabulary term
-| `\https://nbnl.info/nc13/core-eq/term/ean18`
-
-| Profile version
-| `\https://nbnl.info/nc13/core-eq/v2`
-
-| Schema
-| `\https://nbnl.info/nc13/core-eq/v2/schema`
-
-| JSON Schema
-| `\https://nbnl.info/nc13/core-eq/v2/schema/json-schema`
-
-| Example data
-a|
-`\https://nbnl.info/nc13/core-eq/v2/example/tso` +
-`\https://nbnl.info/nc13/core-eq/v2/example/dso`
-|===
-====
 
 == Representation
 

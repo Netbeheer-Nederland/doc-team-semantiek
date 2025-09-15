@@ -1,4 +1,4 @@
-[cols="1,3"]
+[cols="h,3"]
 |===
 | Part | URI template
 
@@ -14,15 +14,14 @@
 | Schema
 | `\https://nbnl.info/\{profile}/\{version}/schema`
 
-| SHACL schema
-| `\https://nbnl.info/\{profile}/\{version}/schema/shacl`
-
 | JSON Schema
 | `\https://nbnl.info/\{profile}/\{version}/schema/json-schema`
 
+| SHACL schema
+| `\https://nbnl.info/\{profile}/\{version}/schema/shacl`
+
 | Example data
 | `\https://nbnl.info/\{profile}/\{version}/example/\{reference}`
-
 |===
 
 where:

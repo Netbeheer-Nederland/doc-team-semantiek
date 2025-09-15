@@ -1,4 +1,7 @@
-[cols="1,3"]
+.Example: Capaciteitskaart
+[%collapsible]
+====
+[cols="h,3"]
 |===
 | Part | URI
 
@@ -6,7 +9,7 @@
 | `\https://nbnl.info/capaciteitskaart`
 
 | Vocabulary term
-| `\https://nbnl.info/capaciteitskaart/term/EnergyAreaKind`
+| `\https://nbnl.info/capaciteitskaart/term/ean18`
 
 | Profile version
 | `\https://nbnl.info/capaciteitskaart/v2`
@@ -14,15 +17,12 @@
 | Schema
 | `\https://nbnl.info/capaciteitskaart/v2/schema`
 
-| SHACL schema
-| `\https://nbnl.info/capaciteitskaart/v2/schema/shacl`
-
 | JSON Schema
 | `\https://nbnl.info/capaciteitskaart/v2/schema/json-schema`
 
 | Example data
 a|
-`\https://nbnl.info/capaciteitskaart/v2/example/dso` +
-`\https://nbnl.info/capaciteitskaart/v2/example/tso`
-
+`\https://nbnl.info/capaciteitskaart/v2/example/tso` +
+`\https://nbnl.info/capaciteitskaart/v2/example/dso`
 |===
+====

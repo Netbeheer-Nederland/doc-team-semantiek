@@ -35,31 +35,18 @@ Policy --> Documentation {
 
 The considerations and justifications for the choices made are documented xref:controlled-vocabulary/index.adoc[here].
 
-NOTE: All IRI templates conform to <<RFC6570>>.
+NOTE: All URI templates conform to <<RFC6570>>.
 
-[cols="h,3"]
-|===
-| Part | URI template
-
-| Documentation project
-| `\https://nbnl.info/\{documentation}`
-
-|===
-
-where:
-
-[horizontal,labelwidth=25%]
-`\{documentation}`:: Path component -- possibly nested -- that identifies the documentation project.
+include::partial$documentation/uri-templates.adoc[]
 
 CAUTION: Avoid assigning stable URIs to document parts such as pages and sections.
-
 
 '''
 
 .Examples
 [%collapsible]
 ====
-include::doc-team-semantiek:projects:partial$documentation/example-uris.adoc[]
+include::doc-team-semantiek:projects:example$/documentation-uris.adoc[]
 ====
 
 == Representation

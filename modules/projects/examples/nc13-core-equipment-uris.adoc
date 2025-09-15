@@ -1,0 +1,31 @@
+.Example: NC13 Core Equipment
+[%collapsible]
+====
+
+In this example, a nested namespace is used to group NC13 data products together.
+
+[cols="h,3"]
+|===
+| Part | URI
+
+| Profile
+| `\https://nbnl.info/nc13/core-eq`
+
+| Vocabulary term
+| `\https://nbnl.info/nc13/core-eq/term/ean18`
+
+| Profile version
+| `\https://nbnl.info/nc13/core-eq/v2`
+
+| Schema
+| `\https://nbnl.info/nc13/core-eq/v2/schema`
+
+| JSON Schema
+| `\https://nbnl.info/nc13/core-eq/v2/schema/json-schema`
+
+| Example data
+a|
+`\https://nbnl.info/nc13/core-eq/v2/example/tso` +
+`\https://nbnl.info/nc13/core-eq/v2/example/dso`
+|===
+====

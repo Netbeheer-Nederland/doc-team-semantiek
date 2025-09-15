@@ -23,42 +23,13 @@ include::partial$controlled-vocabulary/diagram-types-vocabs.adoc[]
 
 The considerations and justifications for the choices made are documented xref:controlled-vocabulary/index.adoc[here].
 
-NOTE: All IRI templates conform to <<RFC6570>>.
+NOTE: All URI templates conform to <<RFC6570>>.
 
-[cols="h,3"]
-|===
-| Part | URI template
-
-| Controlled vocabulary
-| `\https://nbnl.info/\{vocabulary}`
-
-| Vocabulary term
-| `\https://nbnl.info/\{vocabulary}/term/\{reference}`
-
-|===
-
-where:
-
-[horizontal,labelwidth=25%]
-`\{vocabulary}`:: Path component -- possibly nested -- that identifies the profile.
-`\{reference}`:: Local name of the resource.
+include::partial$controlled-vocabulary/uri-templates.adoc[]
 
 '''
 
-.Example: Energiesysteembeheer thesaurus
-[%collapsible]
-====
-[cols="h,3"]
-|===
-| Part | URI
-
-| Thesaurus
-| `\https://nbnl.info/energiesysteembeheer`
-
-| Term
-| `\https://nbnl.info/energiesysteembeheer/term/sbiCodes`
-|===
-====
+include::example$energiesysteembeheer-thesaurus-uris.adoc[]
 
 == Representation
 
