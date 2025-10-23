@@ -3,10 +3,10 @@
 | Part | URI template
 
 | Controlled vocabulary
-| `\https://nbnl.info/\{vocabulary}`
+| `\https://{domain}/\{vocabulary}`
 
 | Vocabulary term
-| `\https://nbnl.info/\{vocabulary}/term/\{reference}`
+| `\https://{domain}/\{vocabulary}/term/\{reference}`
 
 |===
 

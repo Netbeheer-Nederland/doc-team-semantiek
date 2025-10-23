@@ -3,25 +3,25 @@
 | Part | URI template
 
 | Profile
-| `\https://nbnl.info/\{profile}`
+| `\https://{domain}/\{profile}`
 
 | Vocabulary term
-| `\https://nbnl.info/\{profile}/term/\{reference}`
+| `\https://{domain}/\{profile}/term/\{reference}`
 
 | Profile version
-| `\https://nbnl.info/\{profile}/\{version}`
+| `\https://{domain}/\{profile}/\{version}`
 
 | Schema
-| `\https://nbnl.info/\{profile}/\{version}/schema`
+| `\https://{domain}/\{profile}/\{version}/schema`
 
 | JSON Schema
-| `\https://nbnl.info/\{profile}/\{version}/schema/json-schema`
+| `\https://{domain}/\{profile}/\{version}/schema/json-schema`
 
 | SHACL schema
-| `\https://nbnl.info/\{profile}/\{version}/schema/shacl`
+| `\https://{domain}/\{profile}/\{version}/schema/shacl`
 
 | Example data
-| `\https://nbnl.info/\{profile}/\{version}/example/\{reference}`
+| `\https://{domain}/\{profile}/\{version}/example/\{reference}`
 |===
 
 where:

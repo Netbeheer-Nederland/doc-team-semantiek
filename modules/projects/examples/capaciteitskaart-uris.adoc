@@ -6,23 +6,23 @@
 | Part | URI
 
 | Profile
-| `\https://nbnl.info/capaciteitskaart`
+| `\https://{domain}/capaciteitskaart`
 
 | Vocabulary term
-| `\https://nbnl.info/capaciteitskaart/term/ean18`
+| `\https://{domain}/capaciteitskaart/term/ean18`
 
 | Profile version
-| `\https://nbnl.info/capaciteitskaart/v2`
+| `\https://{domain}/capaciteitskaart/v2`
 
 | Schema
-| `\https://nbnl.info/capaciteitskaart/v2/schema`
+| `\https://{domain}/capaciteitskaart/v2/schema`
 
 | JSON Schema
-| `\https://nbnl.info/capaciteitskaart/v2/schema/json-schema`
+| `\https://{domain}/capaciteitskaart/v2/schema/json-schema`
 
 | Example data
 a|
-`\https://nbnl.info/capaciteitskaart/v2/example/tso` +
-`\https://nbnl.info/capaciteitskaart/v2/example/dso`
+`\https://{domain}/capaciteitskaart/v2/example/tso` +
+`\https://{domain}/capaciteitskaart/v2/example/dso`
 |===
 ====

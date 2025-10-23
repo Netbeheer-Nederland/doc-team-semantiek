@@ -3,7 +3,7 @@
 | Part | URI template
 
 | Documentation project
-| `\https://nbnl.info/\{documentation}`
+| `\https://{domain}/\{documentation}`
 
 |===
 

@@ -6,9 +6,9 @@
 | Part | URI
 
 | Thesaurus
-| `\https://nbnl.info/energiesysteembeheer`
+| `\https://{domain}/energiesysteembeheer`
 
 | Term
-| `\https://nbnl.info/energiesysteembeheer/term/sbiCodes`
+| `\https://{domain}/energiesysteembeheer/term/sbiCodes`
 |===
 ====

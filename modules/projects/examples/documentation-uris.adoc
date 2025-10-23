@@ -3,5 +3,5 @@
 | Project | URI
 
 | URI Policy
-| `\https://nbnl.info/uri-policy`
+| `\https://{domain}/uri-policy`
 |===

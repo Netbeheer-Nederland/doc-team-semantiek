@@ -1,0 +1,252 @@
+= Semantic Asset Taxonomy
+:domain: nbnl.info
+// :toc:
+:page-toclevels: 4
+Bart Kleijngeld <bart.kleijngeld@alliander.com>
+October 2, 2025
+
+This is a taxonomy of all the various types of semantic assets distinguished by Netbeheer Nederland (NBNL).
+
+Each subsection of the <<concept-scheme>> section of this document corresponds to a semantic asset, where subsections denote a _narrower than_ relation to their parent section. Therefore, by consulting the <<concept-scheme>> section in the table of contents one can see the taxonomic hierarchy reflected.
+
+Existing standards are referenced as much as possible, and in cases where they may not suffice entirely they are still used heavily for inspiration.
+
+// A machine-readable SKOS representation of this taxonomy can be generated from this file. The RDF triples are defined in code blocks interspersed throughout the document.
+
+[#concept-scheme]
+== Taxonomy
+
+[#controlled-vocabulary]
+=== Controlled vocabulary
+
+[cols="h,3,3"]
+|===
+| | EN | NL
+
+h| Term
+// | concept scheme
+| controlled vocabulary
+| begrippenkader
+
+h| Definition
+| A set of concepts that are relevant in a given context.
+| Een begrippenkader is een verzameling van begrippen die in een bepaalde context relevant zijn.
+
+h| Synonyms
+| controlled vocabulary, structured vocabulary, knowledge organisation system
+| begrippencatalogus
+
+h| Mappings
+2+| n/a
+
+h| Source
+2+| <<NL-SBB>>
+|===
+
+
+[#code-list]
+==== Code list
+
+[cols="h,3,3"]
+|===
+| | EN | NL
+
+h| Term
+| code list
+| codelijst
+
+h| Definition
+| Complete set of data element values of a coded simple data element  [ISO 9735-1:2002, 4.14].
+| Complete verzameling van data-elementwaarden van een gecodeerd, simpel data-element.
+
+h| Synonyms
+| enumeration, value list
+| enumeratie, waardelijst
+
+h| Mappings
+2+| n/a
+
+h| Source
+| <<ADMS-AP>>
+| n/a
+|===
+
+[#glossary]
+==== Glossary
+
+[cols="h,3,3"]
+|===
+| | EN | NL
+
+h| Term
+| glossary
+| begrippenlijst
+
+h| Definition
+| A glossary is an alphabetical list of terms with their definitions.
+| Een begrippenlijst is een alfabetische lijst van termen met hun definities.
+
+h| Synonyms
+| n/a
+| woordenlijst
+
+h| Mappings
+2+| < <<controlled-vocabulary,controlled vocabulary>>
+
+h| Source
+2+| <<NL-SBB>>
+|===
+
+[#taxonomy]
+==== Taxonomy
+
+[cols="h,3,3"]
+|===
+| | EN | NL
+
+h| Term
+| taxonomy
+| taxonomie
+
+h| Definition
+| A taxonomy (or taxonomical classification) is a scheme of classification, especially a hierarchical classification, in which concepts are organized into groups or types.
+| Een taxonomie is een begrippenkader, waarin begrippen hiërarchisch op basis van een classificatiecriterium zijn geordend in groepen of types.
+
+h| Synonyms
+| n/a
+| taxonomische classificatie, classificatieschema
+
+h| Mappings
+2+| < <<controlled-vocabulary,controlled vocabulary>>
+
+h| Source
+2+| <<NL-SBB>>
+|===
+
+[#thesaurus]
+==== Thesaurus
+
+[cols="h,3,3"]
+|===
+| | EN | NL
+
+h| Term
+| thesaurus
+| thesaurus
+
+h| Definition
+| A thesaurus is a controlled and structured vocabulary in which concepts are organized semantically and hierarchically.
+| Een thesaurus is een begrippenkader waarin begrippen semantisch en hiërarchisch zijn geordend.
+
+h| Synonyms
+2+| n/a
+
+h| Mappings
+2+| < <<controlled-vocabulary,controlled vocabulary>>
+
+h| Source
+2+| <<NL-SBB>>
+|===
+
+
+[#ontology]
+=== Ontology
+
+[cols="h,3,3"]
+|===
+| | EN | NL
+
+h| Term
+| ontology
+| ontologie
+
+h| Definition
+| A formal, explicit specification of a shared conceptualization [ISO/DIS 25964-2].
+| Een formele, expliciete specificatie van een gedeelde conceptualisatie.
+
+h| Synonyms
+| conceptual model, conceptual data model, information model
+| conceptueel informatiemodel, conceptueel gegevensmodel, informatiemodel
+
+h| Mappings
+2+| n/a
+
+h| Source
+2+| <<NL-SBB>>
+|===
+
+[#vocabulary]
+==== Vocabulary
+
+[cols="h,3,3"]
+|===
+| | EN | NL
+
+h| Term
+| ontology
+| ontologie
+
+h| Definition
+| A formal, explicit specification of a shared conceptualization [ISO/DIS 25964-2].
+| Een formele, expliciete specificatie van een gedeelde conceptualisatie.
+
+h| Synonyms
+| conceptual model, conceptual data model, information model
+| conceptueel informatiemodel, conceptueel gegevensmodel, informatiemodel
+
+h| Mappings
+2+a|
+[unstyled]
+* < <<ontology,ontology>>
+
+h| Source
+2+| n/a
+|===
+
+[#schema]
+=== Schema
+
+[#standard]
+=== Standard
+
+[#application-profile]
+==== Application profile
+
+[appendix#taxonomy-reference]
+== Taxonomy Reference
+
+|===
+
+
+|===
+
+[bibliography]
+== References
+
+* [[[ANSI-NISO-Z3919]]] National Information Standards Organization (NISO). 2010-05-13. https://www.niso.org/publications/ansiniso-z3919-2005-r2010[ANSI/NISO Z39.19-2005 (R2010)].
+* [[[NL-SBB]]] Geonovum. 2024-10-10. https://docs.geostandaarden.nl/nl-sbb/nl-sbb[NL-SBB - Standaard voor het beschrijven van begrippen.]
+* [[ADMS-AP]] SEMIC (European Union). 2024-06-14. https://semiceu.github.io/DCAT-AP/releases/3.0.0. Formal SKOS representation of controlled vocabulary: https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf
+* [[DCTERMS]] Dublin Core. 2020-01-20. https://www.dublincore.org/specifications/dublin-core/dcmi-terms.
+* [[PROF]] W3C DX Working Group. 2019-12-18. https://www.w3.org/TR/dx-prof
+
+[glossary]
+== Glossary
+
+[glossary]
+[[dfn-controlled-vocabulary]]controlled vocabulary:: A set of concepts that are relevant in a given context.^<<NL-SBB>>^
+[[dfn-code-list]]code list:: Complete set of data element values of a coded simple data element  [ISO 9735-1:2002, 4.14].^<<ADMS-AP>>^
+[[dfn-glossary]]glossary:: A glossary is an alphabetical list of terms with their definitions.^<<NL-SBB>>^
+[[dfn-taxonomy]]taxonomy:: A taxonomy (or taxonomical classification) is a scheme of classification, especially a hierarchical classification, in which concepts are organized into groups or types.^<<NL-SBB>>^
+[[dfn-thesaurus]]thesaurus:: The traditional aim of a thesaurus of a thesaurus is to help the indexer and searcher choose the same term for the same concept. To achieve this, a thesaurus primarily contains all concepts that can be useful for search purposes in a particular domain. Second, a thesaurus should present the concepts in such a way that people can find them easily. This is achieved by establishing relationships between concepts and using the relationships to present the concepts in a structured representation.^<<NL-SBB>>^
+[[dfn-ontology]]ontology:: A formal, explicit specification of a shared conceptualization [ISO/DIS 25964-2].^<<ADMS-AP>>^
+[[dfn-vocabulary]]vocabulary:: An <<dfn-ontology>> that is the machine-processable equivalent to a controlled vocabulary.
+[[dfn-schema]]schema:: A schema is a concrete view on a system or information exchange, describing the structure, content, and semantics of data.^<<ADMS-AP>>^
+[[dfn-standard]]standard:: A reference point against which other things can be evaluated or compared.^<<DCTERMS>>^.
+[[dfn-application-profile]](application) profile:: A <<dfn-standard,specification>> that constrains, extends, combines, or provides guidance or explanation about the usage of other specifications.^<<PROF>>^
+// [[dfn-logical-schema]]logical schema:: A <<dfn-schema>> that is independent of any technology used.
+// [[dfn-technical-schema]]technical schema:: A <<dfn-schema>> expressed in a technological language dedicated to representing data for storage or exchange.
+// [[dfn-data-model]]data model:: See: <<dfn-schema>>.
+// [[dfn-logical-data-model]]logical (data) model:: See: <<dfn-logical-schema>>.
+// [[dfn-physical-data-model]]physical (data) model:: See: <<dfn-technical-schema>>.
+// [[dfn-technical-data-model]]technical (data) model:: See: <<dfn-technical-schema>>.
+// [[dfn-conceptual-data-model]]conceptual (data) model:: See: <<dfn-ontology>>.

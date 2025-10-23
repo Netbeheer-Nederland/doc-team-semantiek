@@ -9,23 +9,23 @@ In this example, a nested namespace is used to group NC13 data products together
 | Part | URI
 
 | Profile
-| `\https://nbnl.info/nc13/core-eq`
+| `\https://{domain}/nc13/core-eq`
 
 | Vocabulary term
-| `\https://nbnl.info/nc13/core-eq/term/ean18`
+| `\https://{domain}/nc13/core-eq/term/ean18`
 
 | Profile version
-| `\https://nbnl.info/nc13/core-eq/v2`
+| `\https://{domain}/nc13/core-eq/v2`
 
 | Schema
-| `\https://nbnl.info/nc13/core-eq/v2/schema`
+| `\https://{domain}/nc13/core-eq/v2/schema`
 
 | JSON Schema
-| `\https://nbnl.info/nc13/core-eq/v2/schema/json-schema`
+| `\https://{domain}/nc13/core-eq/v2/schema/json-schema`
 
 | Example data
 a|
-`\https://nbnl.info/nc13/core-eq/v2/example/tso` +
-`\https://nbnl.info/nc13/core-eq/v2/example/dso`
+`\https://{domain}/nc13/core-eq/v2/example/tso` +
+`\https://{domain}/nc13/core-eq/v2/example/dso`
 |===
 ====
